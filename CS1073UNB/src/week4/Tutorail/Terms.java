@@ -32,10 +32,7 @@ public class Terms {
     }
 
     @Override
-    public String toString() {
-        return "Terms{" +
-                "rate=" + rate +
-                ", fee=" + fee +
-                '}';
-    }
+    public String toString(){
+		return "Interest Rate: " + rate + "\tFee: $" + fee;
+	}
 }

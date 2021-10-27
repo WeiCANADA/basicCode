@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="E:/OneDrive - University of New Brunswick/Courses/Fall 2021/CS1073 JAVAI/Assinents/A5/myJavaDoc" />
+    <option name="OPTION_SCOPE" value="private" />
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="false" />
+    <option name="OPTION_DEPRECATED_LIST" value="false" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>

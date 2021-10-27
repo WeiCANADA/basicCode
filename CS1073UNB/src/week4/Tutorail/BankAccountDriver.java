@@ -41,6 +41,14 @@ public class BankAccountDriver {
         //Month End Balance: $73.25
         System.out.println(joe.toString() + "\nBalance: $" + joe.getBalance());
         joe.monthEnd();
+	/*	Name: Joe
+	Account #: 5432
+	Type: Savings account
+	Interest Rate: 0.03	Fee: $4.5
+Balance: $0.0
+Month End Balance: $-4.5
+*/
+
         System.out.println("Month End Balance: $" + joe.getBalance());
     }
 }

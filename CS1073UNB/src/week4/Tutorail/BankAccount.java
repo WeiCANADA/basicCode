@@ -9,10 +9,6 @@ public class BankAccount{
 	private int num;
 	private double balance;
 	private Terms terms;
-	private double term;
-	private double fee;
-
-
 
 	public BankAccount(String nameIn, String typeIn, int numIn, Terms termsIn){
 		name = nameIn;
@@ -27,13 +23,10 @@ public class BankAccount{
 		this.name = name;
 		this.type = type;
 		this.num = num;
-		this.term = term;
-		this.fee = fee;
-
+		this.terms = new Terms(term,fee);
 	}
 	
 	//write the accessor and mutator methods
-
 
 	public String getName() {
 		return name;
@@ -82,6 +75,10 @@ public class BankAccount{
 	public void setTerms(Terms terms) {
 		this.terms = terms;
 	}
+	public void setTerms(double term, double fee){
+		this.terms.setRate(term);
+		this.terms.setFee(fee);
+	}
 
 	//Method to calculate end of month balance (interest rate, fee)
 	public void monthEnd(double rate, double fee){
@@ -91,25 +88,12 @@ public class BankAccount{
 	//Method to calculate end of month balance using the Term rate and fee
 	public void monthEnd(){
 		//complete this method
-		if (terms == null) {
-			balance = balance*(1 + term) - fee;
-
-		}else{
 			balance = balance*(1+this.terms.getRate()) - this.terms.getFee();
-		}
 	}
 
-	
 	public String toString(){
-		if (terms != null) {
 			return "Name: " + name + "\n\tAccount #: " + num +
 					"\n\tType: " + type + " account" + "\n\t" + terms;
-		}else {
-
-		}
-		return "Name: " + name + "\n\tAccount #: " + num +
-				"\n\tType: " + type + " account" + "\n\t" +
-		"\t{rate=: " + term + ",\tfee=" + fee +"}";
 	}
 
 }
