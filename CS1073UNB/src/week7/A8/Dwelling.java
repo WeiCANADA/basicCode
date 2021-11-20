@@ -30,8 +30,6 @@ public class Dwelling {
 
     @Override
     public String toString() {
-        return "Owner's Name & Dwelling Type\t" + "Dwelling size\t" + "Insurance Cost\n" +
-                "=========================== \t" + "==============\t" + "==============\n" +
-                owner + " (" + type + ")\t\t\t" + size;
+        return owner + " (" + type + ")\t\t\t" + size;
     }
 }
