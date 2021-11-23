@@ -1,14 +1,14 @@
-package classAsBianLiangTybe;
+package src.classAsBianLiangTybe;
 
 public class Hero {
      private String name;
      private int age;
-     private Weapon weapon;
+     private classAsBianLiangTybe.Weapon weapon;
 
     public Hero() {
     }
 
-    public Hero(String name, int age, Weapon weapon) {
+    public Hero(String name, int age, classAsBianLiangTybe.Weapon weapon) {
         this.name = name;
         this.age = age;
         this.weapon = weapon;
@@ -30,14 +30,14 @@ public class Hero {
         this.age = age;
     }
 
-    public Weapon getWeapon() {
+    public classAsBianLiangTybe.Weapon getWeapon() {
         return weapon;
     }
 
-    public void setWeapon(Weapon weapon) {
+    public void setWeapon(classAsBianLiangTybe.Weapon weapon) {
         this.weapon = weapon;
     }
     public void attack(){
-        System.out.println("ÄêÁä" + age + "µÄ" + "Ó¢ÐÛ" + name + "ÕýÔÚÊ¹ÓÃ" + weapon.getCode() + "ÎäÆ÷" +"½øÐÐ¹¥»÷");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½" + age + "ï¿½ï¿½" + "Ó¢ï¿½ï¿½" + name + "ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½" + weapon.getCode() + "ï¿½ï¿½ï¿½ï¿½" +"ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½");
     }
 }

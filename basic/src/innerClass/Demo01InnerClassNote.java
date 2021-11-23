@@ -1,4 +1,4 @@
-package innerClass;
+package src.innerClass;
 /*
 * 一个类内部包含另一个类 如身体和心脏的关系.
 *

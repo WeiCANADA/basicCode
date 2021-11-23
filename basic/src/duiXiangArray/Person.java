@@ -1,4 +1,4 @@
-package duiXiangArray;
+package src.duiXiangArray;
 
 public class Person {
     private String name;

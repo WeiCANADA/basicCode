@@ -1,14 +1,14 @@
-package classAsBianLiangTybe;
+package src.classAsBianLiangTybe;
 
 public class HeroMain {
     public static void main(String[] args) {
         Hero hero = new Hero();
-        hero.setName("ÕÅÈý·á");
+        hero.setName("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         hero.setAge(98);
-        //´´½¨Ò»¸öÎäÆ÷¶ÔÏó
-        Weapon weapon = new Weapon("¼¦Ã«µ§×Ó");
-        //ÎªÓ¢ÐÛÅä±¸ÎäÆ÷
-        hero.setWeapon(weapon);
+        //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        Weapon weapon = new Weapon("ï¿½ï¿½Ã«ï¿½ï¿½ï¿½ï¿½");
+        //ÎªÓ¢ï¿½ï¿½ï¿½ä±¸ï¿½ï¿½ï¿½ï¿½
+        //hero.setWeapon(weapon);
         hero.attack();
     }
 }

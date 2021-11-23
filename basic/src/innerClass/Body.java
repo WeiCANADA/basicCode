@@ -1,4 +1,4 @@
-package innerClass;
+package src.innerClass;
 
 public class Body {
     private String name;

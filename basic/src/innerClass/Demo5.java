@@ -1,4 +1,4 @@
-package innerClass;
+package src.innerClass;
 
 import java.io.BufferedReader;
 import java.io.IOException;

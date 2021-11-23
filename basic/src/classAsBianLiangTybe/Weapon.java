@@ -1,7 +1,7 @@
-package classAsBianLiangTybe;
+package src.classAsBianLiangTybe;
 
 public class Weapon {
-    private String code;//ÎäÆ÷´úºÅ
+    private String code;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     public Weapon() {
     }

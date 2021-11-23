@@ -1,4 +1,4 @@
-package duiXiangArray;
+package src.duiXiangArray;
 //题目:定义一个数组,用来存储3个Person对象
 public class Demo01Array {
     public static void main(String[] args) {

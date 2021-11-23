@@ -1,4 +1,4 @@
-package innerClass;
+package src.innerClass;
 
 public class MyInterfaceMain {
     public static void main(String[] args) {
