@@ -1,5 +1,6 @@
 package week12;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -7,9 +8,25 @@ import java.util.regex.Pattern;
 /**
  * @author: Wei Liu
  */
-public class String_LettersCount {
+public class String_Counters {
     public static void main(String[] args) {
-        int others = 0;
+        int times = 0;
+        char letter = 0;
+        //int[] intArray = lettercounter("abac123");
+        int[] intArray = lowerLetterCount("a123");
+        for (int i = 0; i < intArray.length; i++) {
+            if (i > times) {
+                times = intArray[i];
+                if (i < 27) letter =(char)(i + 65);
+                else letter = (char)(i-26 + 97);
+            }
+        }
+        String letterS = letter + "";
+        System.out.println( letterS + times);
+
+
+
+/*        int others = 0;
         System.out.print("Enter a sentence:");
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
@@ -37,32 +54,54 @@ public class String_LettersCount {
         }
         System.out.println();
         System.out.println("Non-alphabetic characters: " + others);
+        */
     }
 
 
     private static int[] upperLetterCount(String str) {
         final int NUMCHARS = 26;
         char current;
-        int[] upper = new int[NUMCHARS];
+        int[] upperLetters = new int[NUMCHARS];
         for (int i = 0; i < str.length(); i++) {
             current = str.charAt(i);
             if ('A' <= current && current <= 'Z') {
-                upper[current - 'A']++;
+                upperLetters[current - 'A']++;
             }
         }
-        return upper;
+        return upperLetters;
     }
 
     private static int[] lowerLetterCount(String str) {
         final int NUMCHARS = 26;
         char current;
-        int[] lower = new int[NUMCHARS];
+        int[] lowerLetters = new int[NUMCHARS];
         for (int i = 0; i < str.length(); i++) {
             current = str.charAt(i);
             if ('a' <= current && current <= 'z') {
-                lower[current - 'a']++;
+                lowerLetters[current - 'a']++;
             }
+
         }
-        return lower;
+        return lowerLetters;
+    }
+
+    /**
+     * @param str A String
+     * @return int[] i   the indexes represent the zimu (combine the upper cases and lower cases)
+     * the value i represent the show times of each zimu in the string
+     */
+    public static int[] lettercounter(String str) {
+        str = str.replaceAll("[^A-Za-z]", "");
+        final int NUMCHARS = 52;
+        char current;
+        int[] letters = new int[NUMCHARS];
+        for (int i = 0; i < str.length(); i++) {
+            current = str.charAt(i);
+            if (65 <= current) {
+                letters[current - 65]++;
+            }
+
+        }
+        return letters;
     }
 }
