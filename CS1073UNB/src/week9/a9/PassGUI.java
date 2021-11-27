@@ -23,8 +23,8 @@ public class PassGUI extends Application {
     TextField textField;
     TextField textField1;
     TextField textField2;
-    Pass halfDayPass;
-    Pass fullDayPass;
+    A9_Pass halfDayA9Pass;
+    A9_Pass fullDayA9Pass;
     Text text;
     Text text1;
     NumberFormat nf = NumberFormat.getCurrencyInstance();
@@ -42,16 +42,16 @@ public class PassGUI extends Application {
 
         Button hB = new Button("Half-Day");
         hB.setOnAction(event -> {
-            halfDayPass = new HalfDayPass(textField.getText(), Integer.parseInt(textField1.getText()), Integer.parseInt(textField2.getText()));
-            text.setText("Canine Cottage Number: " + halfDayPass.numCottage());
-            text1.setText("Total cost of pass: " + nf.format(halfDayPass.calCost()));
+            halfDayA9Pass = new HalfDayA9Pass(textField.getText(), Integer.parseInt(textField1.getText()), Integer.parseInt(textField2.getText()));
+            text.setText("Canine Cottage Number: " + halfDayA9Pass.numCottage());
+            text1.setText("Total cost of pass: " + nf.format(halfDayA9Pass.calCost()));
         });
 
         Button fB = new Button("Full-day");
         fB.setOnAction(event -> {
-            fullDayPass = new FullDayPass(textField.getText(), Integer.parseInt(textField1.getText()), Integer.parseInt(textField2.getText()));
-            text.setText("Canine Cottage Number: " + fullDayPass.numCottage());
-            text1.setText("Total cost of pass: " + nf.format(fullDayPass.calCost()));
+            fullDayA9Pass = new FullDayA9Pass(textField.getText(), Integer.parseInt(textField1.getText()), Integer.parseInt(textField2.getText()));
+            text.setText("Canine Cottage Number: " + fullDayA9Pass.numCottage());
+            text1.setText("Total cost of pass: " + nf.format(fullDayA9Pass.calCost()));
         });
 
         Button clearB = new Button("Clear");

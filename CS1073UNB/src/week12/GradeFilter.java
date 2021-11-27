@@ -1,4 +1,4 @@
-package week11;
+package week12;
 
 import java.util.Locale;
 import java.util.Scanner;

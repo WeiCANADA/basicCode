@@ -4,7 +4,7 @@ package week9.a9;
  *This Class represent a full day Pass
  * @author: Wei Liu
  */
-public class FullDayPass extends Pass{
+public class FullDayA9Pass extends A9_Pass {
     /**
      * constructor method which initializes all instance variables
      *
@@ -12,7 +12,7 @@ public class FullDayPass extends Pass{
      * @param numT The number of training modules
      * @param numG The number of grooming sessions
      */
-    public FullDayPass(String name, int numT, int numG) {
+    public FullDayA9Pass(String name, int numT, int numG) {
         super(name, numT, numG);
     }
 

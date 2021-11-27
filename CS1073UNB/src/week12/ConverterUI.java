@@ -29,7 +29,7 @@ public class ConverterUI extends Application {
         textField = new TextField();
         Button binary_to_decimal = new Button("Binary to Decimal");
         binary_to_decimal.setOnAction((event) ->{
-            int i = Converter.bin2Decimal(textField.getText());
+            int i = String_Converter.bin2Decimal(textField.getText());
             if(i == -1){
             text.setText("Invalid binary input");
             }else {
@@ -39,7 +39,7 @@ public class ConverterUI extends Application {
         });
         Button english_to_encrypted = new Button("English to encrypted");
         english_to_encrypted.setOnAction((event) ->{
-            text.setText(Converter.english2encrypted(textField.getText()));
+            text.setText(String_Converter.english2encrypted(textField.getText()));
             //textField.clear();
         });
         text = new Text("Welcome to the Converter App!");

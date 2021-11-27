@@ -1,4 +1,4 @@
-package week11;
+package week12;
 
 import com.sun.xml.internal.bind.v2.model.core.ID;
 
@@ -6,20 +6,18 @@ import java.time.Year;
 import java.util.Scanner;
 
 /**
- * @version V1.0
- * @program:
- * @description: An employee’s user ID is composed of their last name, their birth year,
- * followed by their first name. For example Jane Smith’s ID is: Smith1997Jane
- * •
+  An employee’s user ID is composed of their last name, their birth year,
+ * followed by their first name.
+ * For example Jane Smith’s ID is:
+ * Smith1997Jane
  * Write a program that accepts the employee’s ID as input and prints out their age.
- * •
  * Example of input and output:
  * Enter your employee ID: Smith1997Jane
  * Age: 24
  * @author: Wei Liu
  * @date: 2021-11-18 6:46 p.m.
  */
-public class BirthYearFilter {
+public class String_BirthYearFilter {
     public static void main(String[] args) {
         String empID = null;
 		

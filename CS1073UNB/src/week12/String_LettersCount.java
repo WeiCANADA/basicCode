@@ -1,6 +1,5 @@
 package week12;
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -8,18 +7,21 @@ import java.util.regex.Pattern;
 /**
  * @author: Wei Liu
  */
-public class LetterCount {
+public class String_LettersCount {
     public static void main(String[] args) {
         int others = 0;
         System.out.print("Enter a sentence:");
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
+        //call upperLetterCount(String str)
         int[] array = upperLetterCount(str);
+        //print
         for (int i = 0; i < array.length; i++) {
             System.out.print((char) (i + 'A'));
             System.out.print(": " + array[i]+'\t');
         }
         System.out.println();
+        //call lowerLetterCount(String str)
         array = lowerLetterCount(str);
         for (int i = 0; i < array.length; i++) {
             System.out.print((char) (i + 'a'));

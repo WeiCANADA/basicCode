@@ -1,6 +1,9 @@
 package week12;
 
+import java.security.SecureRandom;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * A10 Q1
@@ -8,14 +11,14 @@ import java.util.Scanner;
  *
  * @author Wei Liu
  */
-public class Converter {
+public class String_Converter {
     public static void main(String[] args) {
        // System.out.println(bin2Decimal("1000000111"));
-        System.out.println(english2encrypted("baluga"));
+        System.out.println(english2encrypted("Dave   and Jeni in a group"));
     }
 
     /**
-     * Returns an integer value equal the binary parameter.
+     * Returns an integer value equal the binary number.
      *
      * @param bin2 An unsigned (nonnegative) binary number represented by a string.
      * @return The decimal equivalent for the binary parameter, as an integer.If the binary string is invalid (contains characters other than ‘0’ and ‘1’), the method returns -1.
@@ -42,20 +45,71 @@ public class Converter {
      * @return The encrypted equivalent for the English word or sentence parameter, as a string.
      */
     public static String english2encrypted(String str) {
-        String returnStr = "";
+        StringBuilder returnStr = new StringBuilder();
+        //cuts all chars are not alphabets and space
         str = str.replaceAll("[^A-Za-z\\s]", "");
+        //Replace the space greater than one with a space
+        str = str.replaceAll("\\s+", " ");
         str = str.toUpperCase();
         str = str.replace('E', '3');
-        str = str.replace('B', '8');
+         str = str.replace('B', '8');
         System.out.println(str);
-
 
         Scanner scan = new Scanner(str);
         while (scan.hasNext()) {
+            String temp = scan.next();
+            StringBuilder encryptWord = new StringBuilder();
+            int len = temp.length();
+            for (int i = 0; i < len; i++) {
+                char check = temp.charAt(i);
+                switch (check) {
+                    case 'A': encryptWord.append("V");
+                        break;
+                    case 'V':
+                        encryptWord.append("A");
+                        break;
+                    case 'O':
+                        encryptWord.append("Q");
+                        break;
+                    case 'Q':
+                        encryptWord.append("O");
+                        break;
+                    case 'Y':
+                        encryptWord.append("I");
+                        break;
+                    case 'I':
+                        encryptWord.append("Y");
+                        break;
+                    default: encryptWord.append(check);
+                }
+            }
+            int len1 = encryptWord.length();
+            if(len > 1){
+                char temp1 = encryptWord.charAt(0);
+                encryptWord.replace(0 , 1, encryptWord.charAt(len1 -1) + "");
+                encryptWord.replace(len1 -1 , len1,  temp1 + "");
+            }
+            returnStr.append(encryptWord.append(" "));
+        }
 
+
+
+
+
+/*
+
+        Scanner scan = new Scanner(str);
+        while (scan.hasNext()) {
             String str1 = scan.next();
+
+            int len = str1.length();
+            for (int i = 0; i < len; i++) {
+                char check = str.charAt(i);
+
+            }
+
             char[] chars = str1.toCharArray();
-            int len = chars.length;
+
             for (int i = 0; i < len; i++) {
                 if (chars[i] == 'A') {
                     chars[i] = 'V';
@@ -73,23 +127,17 @@ public class Converter {
             }
 
             if (len > 1) {
-/*                StringBuilder sb = new StringBuilder(str);
-                char c1 = str.charAt(0);
-                char c2 = str.charAt(len - 1);
-                sb.replace(0, 1, c2 + "");
-                sb.replace(len -1, len, c1 + "");
-                str = sb.toString();*/
-
-
                 char temp = chars[0];
                 chars[0] = chars[len - 1];
                 chars[len - 1] = temp;
 
             }
-            returnStr = returnStr.concat(String.valueOf(chars));
-            returnStr = returnStr.concat(" ");
+           // returnStr += String.valueOf(chars) + " ";
         }
-        return returnStr;
-        //return str;
+        //return returnStr.trim();
+
+ */
+        return returnStr.toString();
     }
+
 }

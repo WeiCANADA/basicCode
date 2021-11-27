@@ -6,7 +6,7 @@ import java.util.Random;
  * This Class represent a half day Pass
  * @author Wei Liu
  */
-public class HalfDayPass extends Pass{
+public class HalfDayA9Pass extends A9_Pass {
     /**
      * constructor method which initializes all instance variables
      *
@@ -14,7 +14,7 @@ public class HalfDayPass extends Pass{
      * @param numT The number of training modules
      * @param numG The number of grooming sessions
      */
-    public HalfDayPass(String name, int numT, int numG) {
+    public HalfDayA9Pass(String name, int numT, int numG) {
         super(name, numT, numG);
     }
 

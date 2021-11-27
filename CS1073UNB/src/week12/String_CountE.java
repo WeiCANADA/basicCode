@@ -1,4 +1,4 @@
-package week11;
+package week12;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author: Wei Liu
  * @date: 2021-11-18 11:53 a.m.
  */
-public class CountE {
+public class String_CountE {
     public static void main(String[] args) {
         String phrase = null;
         int totalCount = 0;

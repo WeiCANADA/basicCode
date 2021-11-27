@@ -5,7 +5,7 @@ package week9.a9;
  *
  * @author Wei Liu
  */
-public abstract class Pass {
+public abstract class A9_Pass {
     /**
      * The name of the owner
      */
@@ -27,7 +27,7 @@ public abstract class Pass {
      * @param numT The number of training modules
      * @param numG The number of grooming sessions
      */
-    public Pass(String name, int numT, int numG) {
+    public A9_Pass(String name, int numT, int numG) {
         this.name = name;
         this.numT = numT;
         this.numG = numG;
