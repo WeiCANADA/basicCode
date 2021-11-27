@@ -1,10 +1,5 @@
 package week12;
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * @author: Wei Liu
  */
@@ -13,16 +8,25 @@ public class String_Counters {
         int times = 0;
         char letter = 0;
         //int[] intArray = lettercounter("abac123");
-        int[] intArray = lowerLetterCount("a123");
+        int[] intArray = lettersCounter("aaaaaaAAAAAA123");
         for (int i = 0; i < intArray.length; i++) {
-            if (i > times) {
+            System.out.println(i + "/" + intArray[i]);
+        }
+        //Travers the array to find the maximum value and the corresponding index
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] > times){
                 times = intArray[i];
-                if (i < 27) letter =(char)(i + 65);
-                else letter = (char)(i-26 + 97);
+                if (i < 26) {
+                    letter =(char) (i + 'A');
+                    System.out.println(letter);
+                } else {
+                    letter = (char)( (i - 26) + 'a');
+                    System.out.println(letter);
+                }
             }
         }
-        String letterS = letter + "";
-        System.out.println( letterS + times);
+
+        System.out.println( (letter + "") + times);
 
 
 
@@ -58,7 +62,7 @@ public class String_Counters {
     }
 
 
-    private static int[] upperLetterCount(String str) {
+    private static int[] upperLetterCounter(String str) {
         final int NUMCHARS = 26;
         char current;
         int[] upperLetters = new int[NUMCHARS];
@@ -71,7 +75,7 @@ public class String_Counters {
         return upperLetters;
     }
 
-    private static int[] lowerLetterCount(String str) {
+    private static int[] lowerLetterCounter(String str) {
         final int NUMCHARS = 26;
         char current;
         int[] lowerLetters = new int[NUMCHARS];
@@ -90,17 +94,21 @@ public class String_Counters {
      * @return int[] i   the indexes represent the zimu (combine the upper cases and lower cases)
      * the value i represent the show times of each zimu in the string
      */
-    public static int[] lettercounter(String str) {
+    public static int[] lettersCounter(String str) {
         str = str.replaceAll("[^A-Za-z]", "");
         final int NUMCHARS = 52;
         char current;
         int[] letters = new int[NUMCHARS];
-        for (int i = 0; i < str.length(); i++) {
-            current = str.charAt(i);
-            if (65 <= current) {
-                letters[current - 65]++;
+        //get the lower letter array
+        int[] temp1 = lowerLetterCounter(str);
+        //get the upper letters array
+        int[] temp2 = upperLetterCounter(str);
+        //store the lower and upper letters in  new array and return the new array
+        for (int i = 0; i < temp2.length; i++) {
+                letters[i] = temp2[i];
             }
-
+        for (int i = 0; i < temp1.length; i++) {
+            letters[i + 26] = temp1[i];
         }
         return letters;
     }
