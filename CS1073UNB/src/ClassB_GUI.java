@@ -45,10 +45,7 @@ public class ClassB_GUI extends Application {
     }
 
     public void processKeyTyped(KeyEvent keyEvent) {
-        processButtonEvent();
-    }
 
-    private void processButtonEvent() {
     }
 
 }
