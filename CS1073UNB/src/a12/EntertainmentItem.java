@@ -1,22 +1,23 @@
 package a12;
-
+/**
+ * A12 Q2
+ * The is class represents the EntertainmentItem  that is available at this facility
+ * @Author Wei Liu
+ * */
 public class EntertainmentItem {
-    private String description;
-    private boolean benefactorDonated;
-    private double price;
-    private int size;
-    private EntertainmentItem[] items;
+    private final String description;
+    private final boolean benefactorDonated;
+    private final double price;
 
-    public EntertainmentItem(String description,double price, boolean benefactorDonated) {
+    public EntertainmentItem(String description, double price, boolean benefactorDonated) {
         this.description = description;
         this.benefactorDonated = benefactorDonated;
         this.price = price;
-        this.size = 0;
     }
 
-    public EntertainmentItem(int size) {
-       items = new EntertainmentItem[size];
-    }
+   /* public EntertainmentItem(int size) {
+        items = new EntertainmentItem[size];
+    }*/
 
     public String getDescription() {
         return description;

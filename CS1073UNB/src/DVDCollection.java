@@ -1,5 +1,3 @@
-package week12;
-
 /**
  * @author Wei Liu
  * @version V1.0
@@ -10,7 +8,7 @@ public class DVDCollection {
     private int count ;
     private double totalCost;
 
-    public DVDCollection(DVD[] dvd, int count, double totalCost) {
+    public DVDCollection() {
         this.collection = new DVD[100];
         this.count = 0;
         this.totalCost = 0.0;

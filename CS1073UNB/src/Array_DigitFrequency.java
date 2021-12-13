@@ -1,12 +1,9 @@
-package week12;
-
 /**
  * @author Wei Liu
- * @version V1.0
  */
 public class Array_DigitFrequency {
     public static void main(String[] args) {
-        final int[] ints = digitFrequency(12345678);
+        int[] ints = digitFrequency(12345678);
         for (int anInt : ints) {
             System.out.print(anInt + "\t");
         }

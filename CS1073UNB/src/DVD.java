@@ -1,12 +1,6 @@
-package week12;
-
 import java.text.NumberFormat;
 
-/**
- * @author Wei Liu
- * @version V1.0
- * @date
- */
+
 public class DVD {
     private String title, director;
     private int year;

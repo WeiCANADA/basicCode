@@ -17,6 +17,9 @@ public class RegExp12 {
 
          */
         String content = "22222unb10031,stu5225,1234,ded11111,ID:12334-111222333";
+        content = "Ahoaa";
+        int count = 0;
+
         //String regExp = "(\\d)\\1";
         //String regExp = "(\\d)\\1{4}";
         //String regExp = "(\\d)(\\d)\\2\\1";
@@ -26,11 +29,13 @@ public class RegExp12 {
         * 要求，前五个是五位数+ “-”号，然后是一个每三位相同的九位数
         * \\d{5}-(\\d)\\1{2}(\\d)\\2{2}(\\d)\\3{2}
         * */
-        String regExp = "\\d{5}-(\\d)\\1{2}(\\d)\\2{2}(\\d)\\3{2}";
+        //String regExp = "\\d{5}-(\\d)\\1{2}(\\d)\\2{2}(\\d)\\3{2}";
+        String regExp = "[AaEeIiOoUu]";
         Pattern pattern = Pattern.compile(regExp);
         Matcher matcher = pattern.matcher(content);
         while (matcher.find()){
-            System.out.println(matcher.group());
+            count++;
+            System.out.println(matcher.group() + count);
         }
     }
 }
